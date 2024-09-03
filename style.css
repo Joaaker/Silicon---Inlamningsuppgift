@@ -6,37 +6,46 @@
 /* Aktiveras för skärmar som är 760 pixlar eller mindre */
 /* Endast för telefoner  */
 @media (max-width: 760px){
-  .phoneHide{
+  .imageContainer{
     display: none;
   }
 }
 
-
-
-
 body{
-    font-family: "Manrope", sans-serif;
-    margin: 0;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
+header{ /*Färgkod av Johan Larsson */
+  background: linear-gradient(170deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+  /* Mörk tema?  background: linear-gradient(170deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%), #0B0F19; */
+}
 
 .navbar{
+  display: grid;
+  padding-top: 1rem;
+  grid-template-columns: repeat(4, 1fr)
+}
+.mainLogoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: s;
+  p{
     display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+    align-items: center;
+    font-weight: 900;
+    color: #0B0F19;
+  }
 }
 
-.navbarLeft, 
+/* .navbarLeft, 
 .navbarRight{
     display: flex;
     align-items: center;
-}
+} */
 
-.logoText{
-  font-weight: 900;
-  color: #0B0F19;
-}
 
 
 
@@ -47,7 +56,7 @@ body{
     font-size: 20px;
     font-weight: 600;
     margin: 1rem 1.25rem;
-    position: absolute;
+    /* position: absolute; */
   }
   
   .dark-mode-toggle span {/* Kod för toggleknapp skriven av ChatGPT */
@@ -95,12 +104,6 @@ body{
 
 
 
-header{ /*Färgkod av Johan Larsson */
-    background: linear-gradient(170deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-    /* Mörk tema?  background: linear-gradient(170deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%), #0B0F19; */
-    display: flex;
-}
-
 .discoverBtnContainer{
     display: flex;
 }
@@ -118,6 +121,15 @@ header{ /*Färgkod av Johan Larsson */
 @media (max-width: 1300px){
 
   .desktopOnly{ 
+      display: none;
+    }
+  }
+
+
+/* För desktop */
+/* Vid skärmstorlek 1301 pixlar eller större */
+  @media (min-width: 1301px){
+    .menu-button{
       display: none;
     }
   }
