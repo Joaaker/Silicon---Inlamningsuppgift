@@ -6,7 +6,7 @@
   --clr-white: #FFFFFF;
   --clr-dark900: #0B0F19;
   --clr-gray800: #33354D;
-
+  --clr-gray700: #565973;
   --clr-gray600: #9397AD;
 
   --clr-primaryHover: #6365f1ad;
@@ -28,7 +28,6 @@ body{
   font-size: 16px;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .wrapper{
@@ -137,6 +136,55 @@ header{ /*Färgkod av Johan Larsson */
   display: none;
 }
 
+#nav-features{
+  color: var(--clr-gray800);
+  margin-left: 10px;
+  margin-right: auto;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.showcase{
+  display: grid;
+  grid-template-rows: auto auto auto 1fr ;
+}
+
+.showcase h1{
+  padding: 0 var(--base-padding);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+}
+
+.showcase p{
+  font-size: 18px;
+  padding: var(--base-padding);
+  padding-top: 0;
+}
+
+.showcase img{
+  margin: 0.5rem auto;
+}
+
+.discover-btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--base-padding);
+  img{
+    margin-right: 0;
+    margin-left: auto;
+  }
+  span{
+    margin-right: auto;
+    color: var(--clr-gray700);
+  }
+}
+
+
+
+
+
 .imageContainer{
   display: none;
 }
@@ -161,18 +209,20 @@ header{ /*Färgkod av Johan Larsson */
 
   .wrapper{
     width: 100%;
-    padding-left: auto;
-
   }
 
   .navbar{
     max-width: 1320px;
-    grid-template-columns: 1fr 1fr auto auto;
-    padding-right: auto;
-    padding-left: auto;
-    margin-left: 0;
-    margin-right: 0;
+    grid-template-columns: 1fr 5fr auto auto;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  #nav-features{
+    margin-left: 0;
+    font-size: 20px;
+  }
+  
 
   .btn-mobile-tablet{
     display: none;
