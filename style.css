@@ -1,135 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
 :root {
-  --clr-primary:
+  --clr-primary: #6366F1;
+  --clr-white: #FFFFFF;
+  --clr-dark900: #0B0F19;
+  --clr-gray800: #33354D;
+
+  --clr-gray600: #9397AD;
+
+  --clr-primaryHover: #6365f1ad;
+  --base-padding: 1rem;
+  --transition-time: all 0.2s;
 }
 
-
-/* Aktiveras för skärmar som är 760 pixlar eller mindre */
-/* Endast för telefoner  */
-@media (max-width: 760px){
-  .imageContainer{
-    display: none;
-  }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  max-width: 100%;
 }
 
 body{
   font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 header{ /*Färgkod av Johan Larsson */
-  background: linear-gradient(170deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+  background: linear-gradient(10deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
   /* Mörk tema?  background: linear-gradient(170deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%), #0B0F19; */
 }
 
 .navbar{
   display: grid;
-  padding-top: 1rem;
-  grid-template-columns: repeat(4, 1fr)
-}
-.mainLogoContainer{
-  display: flex;
+  grid-template-columns: 1fr auto auto;
+  padding-left: var(--base-padding);
+  padding-right: var(--base-padding);
+  padding-top: var(--base-padding);
   justify-content: center;
-  align-items: s;
-  p{
-    display: flex;
-    align-items: center;
-    font-weight: 900;
-    color: #0B0F19;
-  }
+  align-items: center;
 }
-
-/* .navbarLeft, 
-.navbarRight{
-    display: flex;
-    align-items: center;
-} */
-
-
-
 
 /* Grund-Kod för toggleknapp skriven av ChatGPT */
 .dark-mode-toggle {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 1rem 1.25rem;
-    /* position: absolute; */
-  }
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 1rem 1.25rem;
+}
   
-  .dark-mode-toggle span {/* Kod för toggleknapp skriven av ChatGPT */
-    color: #565973;
-    margin-right: 10px;
+.darkmode-toggle-text {/* Kod för toggleknapp skriven av ChatGPT */
+  color: #565973;
+  margin-right: 10px;
+  display: none;
+}
+
+.toggle-checkbox {
+  display: none;  
+}
+
+.toggle-label {/* Kod för toggleknapp skriven av ChatGPT */
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: var(--clr-gray600);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+  
+.toggle-label::after {/* Kod för toggleknapp skriven av ChatGPT */
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--clr-white);
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+.toggle-checkbox:checked + .toggle-label {/* Kod för toggleknapp skriven av ChatGPT */
+  background-color: var(--clr-primary);
+}
+  
+.toggle-checkbox:checked + .toggle-label::after {/* Kod för toggleknapp skriven av ChatGPT */
+  transform: translateX(30px);
+}
+
+.primary-btn{
+  width: 160px;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border-radius: 8px;
+  padding: 10px;
+  padding-left: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  user-select: none;
+  span{
+    margin-left: 6px;
+  }
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+  background-color: var(--clr-primaryHover);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
+} 
+
+.btn-mobile-tablet{
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+}
+
+.desktopOnly{ 
+  display: none;
+}
+
+.imageContainer{
+  display: none;
+}
+
+
+/* Ska gälla för tablets och större */
+@media (min-width: 768px){
+  .darkmode-toggle-text{
+    display: block;
+
   }
 
-  .toggle-checkbox {
+  .imageContainer{
+    display: block;
+  }
+
+}
+
+
+/* Gäller endast för desktop */
+@media (min-width: 1340px){
+
+  .wrapper{
+    width: 100%;
+    padding-left: auto;
+
+  }
+
+  .navbar{
+    max-width: 1320px;
+    grid-template-columns: 1fr 1fr auto auto;
+    padding-right: auto;
+    padding-left: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .btn-mobile-tablet{
     display: none;
-    
   }
 
-  .toggle-label {/* Kod för toggleknapp skriven av ChatGPT */
-    position: relative;
-    width: 60px;
-    height: 30px;
-    background-color: #565973;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    user-select: none;
-  }
-  
-  .toggle-label::after {/* Kod för toggleknapp skriven av ChatGPT */
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .toggle-checkbox:checked + .toggle-label {/* Kod för toggleknapp skriven av ChatGPT */
-    background-color: #6366F1;
-  }
-  
-  .toggle-checkbox:checked + .toggle-label::after {/* Kod för toggleknapp skriven av ChatGPT */
-    transform: translateX(30px);
+  .desktopOnly{
+    display: block;
   }
 
-
-
-
-.discoverBtnContainer{
-    display: flex;
 }
-
-.features{
-  display: flex;
-}
-
-.featuresContent{
-  display: flex;
-}
-
-/* Tablet och telefon */
-/* Vid skärm storlek 1300px eller mindre */
-@media (max-width: 1300px){
-
-  .desktopOnly{ 
-      display: none;
-    }
-  }
-
-
-/* För desktop */
-/* Vid skärmstorlek 1301 pixlar eller större */
-  @media (min-width: 1301px){
-    .menu-button{
-      display: none;
-    }
-  }

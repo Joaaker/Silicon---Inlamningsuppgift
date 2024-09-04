@@ -5,145 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silicon - Manage All Your Money in One App</title>
     <link rel="stylesheet" href="style.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>  
-    <header>
-        <nav class="navbar">
-            <div class="mainLogoContainer">
-                <img src="/Images/Si logo.svg" alt="Silicon logo">
-                <p class="logoText">Silicon</p>
-            </div>
-            <p class="desktopOnly">Features</p>
-            <div class="dark-mode-toggle"> <!-- Kod för toggleknapp skriven av ChatGPT -->
-                <span>Dark Mode</span>
-                <input type="checkbox" id="dark-mode" class="toggle-checkbox">
-                <label for="dark-mode" class="toggle-label"></label>
-            </div><!-- Kod för toggleknapp skriven av ChatGPT -->
-            <button class="primaryBTN desktopOnly">Sign in / up</button>
-            <img class="lightTheme" src="/Images/Button - Toggle navigation LIGHT.svg" alt="navigation button">
-        </nav>
-        <section class="showcase">     
-            <h1>Manage All Your Money in One App</h1>
-            <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
-            <img src="/Images/appstore.svg" alt="Apple app strore logo">
-            <img src="/Images/googleplay.svg" alt="Google play logo">   
-            <div class="discoverBtnContainer">
-                <img src="/Images/next-btn.svg" alt="arrow button">
-                <p>Discover more</p>
-            </div>
-            <div class="imageContainer">
-                <img class="phoneHide" src="/Images/iphone 12 header.svg" alt="iPhone 12 image">
-            </div>
-        </section>
-    </header>
-    <main>  
-        <div class="logos.container">
-            <img src="/Images/logoipsum 1.svg" alt="logo1">
-            <img src="/Images/logoipsum 2.svg" alt="logo2">
-            <img src="/Images/logoipsum 3.svg" alt="logo3">
-            <img src="/Images/logoipsum 4.svg" alt="logo4">
-            <img src="/Images/logoipsum 5.svg" alt="logo5">
-            <img src="/Images/logoipsum 6.svg" alt="logo6">
-        </div>  
-        <article class="features">
-            <img src="/Images/iphone 12 features.svg" alt="iphone 12 image">
-            <section class="appFeatures">
-                <h2>App Features</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</h3>
-                <div class="featuresContent">
-                    <section class="featuresSection">
-                        <img src="/Images/credit-card.svg" alt="credit-card icon">
-                        <h4>Easy Payments</h4>
-                        <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
-                    </section>
-                    <section class="featuresSection">
-                        <img src="/Images/shield.svg" alt="shield icon">
-                        <h4>Data Security</h4>
-                        <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non. </p>
-                    </section>
-                    <section class="featuresSection">
-                        <img src="/Images/bars-graphic.svg" alt="bars-graphic icon">
-                        <h4>Cost Statistics</h4>
-                        <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
-                    </section>
-                    <section class="featuresSection">
-                        <img src="/Images/communication.svg" alt="communication icon">
-                        <h4>Support 24/7</h4>
-                        <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
-                    </section>
-                    <section class="featuresSection">
-                        <img src="/Images/wallet.svg" alt="wallet icon">
-                        <h4>Regular Cashback</h4>
-                        <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
-                    </section>
-                    <section class="featuresSection">
-                        <img src="/Images/happy.svg" alt="happy icon">
-                        <h4>Top Standards</h4>
-                        <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
-                    </section>
+    <div class="wrapper">  
+        <header>
+            <nav class="navbar">
+                <div class="mainLogoContainer">
+                    <img src="/Images/Logotype main.svg" alt="Silicon logo">
+                </div>
+                <a class="desktopOnly" href="#">Features</a>
+                <div class="dark-mode-toggle"> <!-- Kod för toggleknapp skriven av ChatGPT -->
+                    <span class="darkmode-toggle-text" ">Dark Mode</span>
+                    <input type="checkbox" id="dark-mode" class="toggle-checkbox">
+                    <label for="dark-mode" class="toggle-label"></label>
+                </div><!-- Kod för toggleknapp skriven av ChatGPT -->
+                <a class="primary-btn desktopOnly" id="signin-auth-btn" href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Sign in / up</span>
+                </a>
+                <button class="btn-mobile-tablet">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+            <section class="showcase">     
+                <h1>Manage All Your Money in One App</h1>
+                <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
+                <img src="/Images/appstore.svg" alt="Apple app strore logo">
+                <img src="/Images/googleplay.svg" alt="Google play logo">   
+                <div class="discoverBtnContainer">
+                    <img src="/Images/next-btn.svg" alt="arrow button">
+                    <p>Discover more</p>
+                </div>
+                <div class="imageContainer">
+                    <img class="phoneHide" src="/Images/iphone 12 header.svg" alt="iPhone 12 image">
                 </div>
             </section>
+        </header>
+        <main>  
+            <div class="logos.container">
+                <img src="/Images/logoipsum 1.svg" alt="logo1">
+                <img src="/Images/logoipsum 2.svg" alt="logo2">
+                <img src="/Images/logoipsum 3.svg" alt="logo3">
+                <img src="/Images/logoipsum 4.svg" alt="logo4">
+                <img src="/Images/logoipsum 5.svg" alt="logo5">
+                <img src="/Images/logoipsum 6.svg" alt="logo6">
+            </div>  
+            <article class="features">
+                <img src="/Images/iphone 12 features.svg" alt="iphone 12 image">
+                <section class="appFeatures">
+                    <h2>App Features</h2>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</h3>
+                    <div class="featuresContent">
+                        <section class="featuresSection">
+                            <img src="/Images/credit-card.svg" alt="credit-card icon">
+                            <h4>Easy Payments</h4>
+                            <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+                        </section>
+                        <section class="featuresSection">
+                            <img src="/Images/shield.svg" alt="shield icon">
+                            <h4>Data Security</h4>
+                            <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non. </p>
+                        </section>
+                        <section class="featuresSection">
+                            <img src="/Images/bars-graphic.svg" alt="bars-graphic icon">
+                            <h4>Cost Statistics</h4>
+                            <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
+                        </section>
+                        <section class="featuresSection">
+                            <img src="/Images/communication.svg" alt="communication icon">
+                            <h4>Support 24/7</h4>
+                            <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
+                        </section>
+                        <section class="featuresSection">
+                            <img src="/Images/wallet.svg" alt="wallet icon">
+                            <h4>Regular Cashback</h4>
+                            <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
+                        </section>
+                        <section class="featuresSection">
+                            <img src="/Images/happy.svg" alt="happy icon">
+                            <h4>Top Standards</h4>
+                            <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+                        </section>
+                    </div>
+                </section>
 
-        </article>
-        <article class="slider">        
-            <h2>How Does It Work?</h2>
-            <div class="sliderImgContainer">
-                <img src="/Images/slider iPhone 12 Pro 1.svg" alt="iphone 12 image">
-                <img src="/Images/slider iPhone 12 Pro 2.svg" alt="iphone 12 image">
-                <img src="/Images/slider iPhone 12 Pro 3.svg" alt="iphone 12 image">
-            <h3>Latest transaction history</h3>
-            <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
-            </div>
-        </article>
-        <article class="features2">
-            <section class="upperSection">
-                <div class="upperWrapper"> 
-                    <h3>Make your money transfer simple and clear</h3>
-                    <ul>
-                        <li>
-                            <img src="/Images/bx-check-circle.svg" alt="checkmark">
-                            Banking transactions are free for you
-                        </li>
-                        <li>
-                            <img src="/Images/bx-check-circle.svg" alt="checkmark">
-                            No monthly cash commission
-                        </li>
-                        <li>
-                            <img src="/Images/bx-check-circle.svg" alt="checkmark">
-                            Manage payments and transactions online
-                        </li>
-                    </ul>
+            </article>
+            <article class="slider">        
+                <h2>How Does It Work?</h2>
+                <div class="sliderImgContainer">
+                    <img src="/Images/slider iPhone 12 Pro 1.svg" alt="iphone 12 image">
+                    <img src="/Images/slider iPhone 12 Pro 2.svg" alt="iphone 12 image">
+                    <img src="/Images/slider iPhone 12 Pro 3.svg" alt="iphone 12 image">
+                <h3>Latest transaction history</h3>
+                <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
+                </div>
+            </article>
+            <article class="features2">
+                <section class="upperSection">
+                    <div class="upperWrapper"> 
+                        <h3>Make your money transfer simple and clear</h3>
+                        <ul>
+                            <li>
+                                <img src="/Images/bx-check-circle.svg" alt="checkmark">
+                                Banking transactions are free for you
+                            </li>
+                            <li>
+                                <img src="/Images/bx-check-circle.svg" alt="checkmark">
+                                No monthly cash commission
+                            </li>
+                            <li>
+                                <img src="/Images/bx-check-circle.svg" alt="checkmark">
+                                Manage payments and transactions online
+                            </li>
+                        </ul>
+                        <img src="/Images/btn learn more.svg" alt="learn more button">
+                    </div>
+                    <img src="/Images/forecast.svg" alt="forecast preview">
+                </section>
+                <section class="lowerSection"> 
+                    <img src="/Images/contacts.svg" alt="contacts preview">
+                    <div class="lowerWrapper">  
+                        <h3>Receive payment from international bank details</h3>
+                        <div class="infoContainer">
+                            <img src="/Images/credit-card.svg" alt="credit-card icon">
+                            <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
+                        </div> 
+                        <div class="infoContainer">
+                            <img src="/Images/wallet.svg" alt="wallet icon">
+                            <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
+                        </div> 
+                    </div>
                     <img src="/Images/btn learn more.svg" alt="learn more button">
-                </div>
-                <img src="/Images/forecast.svg" alt="forecast preview">
-            </section>
-            <section class="lowerSection"> 
-                <img src="/Images/contacts.svg" alt="contacts preview">
-                <div class="lowerWrapper">  
-                    <h3>Receive payment from international bank details</h3>
-                    <div class="infoContainer">
-                        <img src="/Images/credit-card.svg" alt="credit-card icon">
-                        <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
-                    </div> 
-                    <div class="infoContainer">
-                        <img src="/Images/wallet.svg" alt="wallet icon">
-                        <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
-                    </div> 
-                </div>
-                <img src="/Images/btn learn more.svg" alt="learn more button">
-            </section>
-        </article>
-        <article class="testimonials">
-            <h2>Clients are Loving Our App</h2>
-            <img src="/Images/testimonial 1.svg" alt="customer testimonial">
-            <img src="/Images/testimonial 2.svg" alt="customer testimonial">
+                </section>
+            </article>
+            <article class="testimonials">
+                <h2>Clients are Loving Our App</h2>
+                <img src="/Images/testimonial 1.svg" alt="customer testimonial">
+                <img src="/Images/testimonial 2.svg" alt="customer testimonial">
 
-        </article>
+            </article>
 
-    </main>
-    <footer>
-        <p>© 2024 Silicon. All rights reserved. Credit MadrasThemes</p>
-    </footer>
+        </main>
+        <footer>
+            <p>© 2024 Silicon. All rights reserved. Credit MadrasThemes</p>
+        </footer>
+    </div>    
 </body>
 </html>
