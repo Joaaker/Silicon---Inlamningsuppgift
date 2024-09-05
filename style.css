@@ -8,7 +8,8 @@
   --clr-gray800: #33354D;
   --clr-gray700: #565973;
   --clr-gray600: #9397AD;
-
+  --clr-text-grey: #585C7B;
+  --clr-background-light: #F3F6FF;
   --clr-primaryHover: #6365f1ad;
   --base-padding: 1rem;
   --transition-time: all 0.2s;
@@ -124,7 +125,12 @@ header{ /*Färgkod av Johan Larsson */
 .primary-btn:focus {
   background-color: var(--clr-primaryHover);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
-} 
+}
+
+.primary-btn:active{
+  background-color: var(--clr-gray800);
+  transition: var(--transition-time);
+}
 
 .btn-mobile-tablet{
   background-color: transparent;
@@ -177,30 +183,99 @@ header{ /*Färgkod av Johan Larsson */
   }
   span{
     margin-right: auto;
-    color: var(--clr-gray700);
+    color: var(--clr-text-grey);
+  }
+}
+
+.logos-container,
+.iphone-image, 
+.imageContainer{
+  display: none;
+}
+
+article.features{
+  padding: var(--base-padding);
+  margin-left: auto;
+  margin-right: auto;
+
+  h2{
+  display: flex;
+  justify-content: center;
+  }
+  .lorem-text{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-text-grey);
+    font-size: 18px;
+  }
+}
+
+.featuresSection{
+  display: grid;
+  margin-top: var(--base-padding);
+
+  .img-container-features{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  h4{
+    font-weight: 900;
+    font-size: 20px;
+    grid-column: 2 / 4;
+    margin-left: var(--base-padding);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .features-text{
+    display: flex;
+    font-size: 16px;
+    text-align: left;
+    margin-left: var(--base-padding);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.img-container-features{
+  img{
+    margin-top: 0;
+    border-radius: 0.5rem;
+    background-color: var(--clr-background-light);
+    padding: var(--base-padding);
   }
 }
 
 
 
-
-
-.imageContainer{
+.iphone-for-tablet,
+.iphone-for-desktop{
   display: none;
 }
 
 
 /* Ska gälla för tablets och större */
 @media (min-width: 768px){
+
   .darkmode-toggle-text{
     display: block;
-
   }
+  .btn-mobile-tablet{
+    margin-left: 3rem;
+    margin-right: 1.5rem;
+  }
+
 
   .imageContainer{
     display: block;
   }
 
+}
+
+.slider{
+  background-color: var(--clr-background-light);
 }
 
 
