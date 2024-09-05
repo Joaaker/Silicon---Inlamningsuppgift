@@ -168,8 +168,16 @@ header{ /*Färgkod av Johan Larsson */
   padding-top: 0;
 }
 
-.showcase img{
-  margin: 0.5rem auto;
+.appstore{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.googleplay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .discover-btn-container{
@@ -255,10 +263,12 @@ article.features{
   display: none;
 }
 
+.slider{
+  background-color: var(--clr-background-light);
+}
 
 /* Ska gälla för tablets och större */
 @media (min-width: 768px){
-
   .darkmode-toggle-text{
     display: block;
   }
@@ -266,16 +276,50 @@ article.features{
     margin-left: 3rem;
     margin-right: 1.5rem;
   }
+  .showcase{
+    display: grid;
 
+    .h1-container{
+      grid-column: 1 / 8;
+      grid-row: 1 / 2;
+      font-size: 44px;
+      font-weight: 800;
+      margin: 0 auto;
+    }
+    p{
+      grid-column: 1 / 4;
+      grid-row:  5 / 6;
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+    .appstore{
+      width: 8.5rem;
+      height: 3.5rem;
+      grid-column: 1 / 2;
+      grid-row:  6 / 7;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .googleplay{
+      width: 8.5rem;
+      height: 3.5rem;
+      grid-column: 2 / 4;
+      grid-row: 6 / 7;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .discover-btn-container{
+      grid-column: 1 / 4;
+      grid-row: 7 / 8;
+    }
 
+  }
   .imageContainer{
     display: block;
+    grid-column: 4 / 8;
+    grid-row: 2 / 8;
   }
 
-}
-
-.slider{
-  background-color: var(--clr-background-light);
 }
 
 
