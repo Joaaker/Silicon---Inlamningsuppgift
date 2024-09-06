@@ -8,6 +8,7 @@
   --clr-gray800: #33354D;
   --clr-gray700: #565973;
   --clr-gray600: #9397AD;
+  --clr-gray300: #E2E5F1;
   --clr-text-grey: #585C7B;
   --clr-background-light: #F3F6FF;
   --clr-primaryHover: #6365f1ad;
@@ -152,17 +153,21 @@ header{ /*Färgkod av Johan Larsson */
 
 .showcase{
   display: grid;
-  grid-template-rows: auto auto auto 1fr ;
+  grid-template-rows: 1fr auto auto auto auto;
 }
 
 .showcase h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0 var(--base-padding);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0.5rem auto;
   font-size: 40px;
 }
 
 .showcase p{
+  display: flex;
+  text-align: center;
   font-size: 18px;
   padding: var(--base-padding);
   padding-top: 0;
@@ -172,12 +177,27 @@ header{ /*Färgkod av Johan Larsson */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem auto;
+  /* width: 320px; */
+
 }
 
 .googleplay{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem auto;
+  /* width: 320px; */
+
+}
+
+.appstore img,
+.googleplay img {
+  width: 100%;
+  max-width: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
 }
 
 .discover-btn-container{
@@ -195,10 +215,21 @@ header{ /*Färgkod av Johan Larsson */
   }
 }
 
-.logos-container,
+.all-logos-container,
 .iphone-image, 
 .imageContainer{
   display: none;
+}
+
+.logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--clr-gray300);
+  border-radius: 8px;
+  height: 100px;
+  width: 200px;
+  gap: 1rem;
 }
 
 article.features{
@@ -267,6 +298,24 @@ article.features{
   background-color: var(--clr-background-light);
 }
 
+.container-footer{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+footer{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: var(--clr-gray600);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 5px;
+}
+
+
 /* Ska gälla för tablets och större */
 @media (min-width: 768px){
   .darkmode-toggle-text{
@@ -319,6 +368,16 @@ article.features{
     grid-column: 4 / 8;
     grid-row: 2 / 8;
   }
+  .all-logos-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem auto;
+  }
+  #logoipsum-5,
+  #logoipsum-6{
+    display: none;
+  }
 
 }
 
@@ -350,5 +409,9 @@ article.features{
   .desktopOnly{
     display: block;
   }
-
+  
+  #logoipsum-5,
+  #logoipsum-6{
+    display: flex;
+  }
 }
