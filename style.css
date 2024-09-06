@@ -9,6 +9,7 @@
   --clr-gray700: #565973;
   --clr-gray600: #9397AD;
   --clr-gray300: #E2E5F1;
+  --clr-icon: #3E4265;
   --clr-text-grey: #585C7B;
   --clr-background-light: #F3F6FF;
   --clr-primaryHover: #6365f1ad;
@@ -205,14 +206,34 @@ header{ /*Färgkod av Johan Larsson */
   justify-content: center;
   align-items: center;
   padding: var(--base-padding);
-  img{
-    margin-right: 0;
-    margin-left: auto;
-  }
   span{
     margin-right: auto;
+    margin-left: 0.5rem;
     color: var(--clr-text-grey);
   }
+}
+
+.circle-btn { /* Kod för denna knapp skriven av ChatGPT */
+  width: 44px; 
+  height: 44px; 
+  border-radius: 50%;
+  background-color: var(--clr-white); 
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.circle-btn i {
+  color: #3E4265;
+  font-size: 12px; 
+}
+
+/* Hover effect for the button */
+.circle-btn:hover {
+  background-color: #e0e0e0;
 }
 
 .all-logos-container,
