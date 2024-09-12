@@ -250,7 +250,8 @@ header{ /*Färgkod av Johan Larsson */
 .iphone-image-container, 
 .imageContainer,
 .tablet-desktop-only,
-.tablet-only{
+.tablet-only,
+.hide-for-mobile{
   display: none;
 }
 
@@ -411,7 +412,8 @@ footer{
   }
 
   .tablet-desktop-only,
-  .darkmode-toggle-text{
+  .darkmode-toggle-text,
+  .hide-for-mobile{
     display: block;
   }
   .btn-mobile-tablet{
@@ -544,7 +546,7 @@ footer{
   .mobile-only{
     display: none;
   }
-    
+  
 }
 
 /* Gäller endast för mobil och tablets */
@@ -806,8 +808,6 @@ footer{
       margin-right: 5rem;
     }
   }
-
-
 
 
 }
