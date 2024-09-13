@@ -206,93 +206,111 @@
                     </div>
                 </div>
             </article>
-            <section class="FAQ-section">   
+            <section class="FAQ-contact-section">   
                 <div class="text-container">
                     <h2>Any questions? <br class="hide-for-mobile"> Check out the FAQs</h2>
                     <p>Still have unanswered questions and need to get <br class="hide-for-mobile"> in touch?</p>
                 </div>
-                <div class="contact-us-container">
-                    <div class="phone-contact-container">
-                        <i class="fa-solid fa-phone-volume fa-rotate-by" style="color: #6366F1; --fa-rotate-angle: 330deg;"></i>
+                <!-- Aria expanded, aria-controls och hidden tagen från ChatGPT -->
+                <div class="FAQ-items-container">
+                    <div class="FAQ-item">
+                        <div class="dropdown-btn-container">
+                            <button class="dropdown-btn" aria-expanded="false" aria-controls="answer1">
+                                <span>Is any of my personal information stored in the App?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>    
+                        <div class="FAQ-answer" id="answer1" hidden>
+                            <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                            <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                        </div>
+                    </div>
 
-                        <p>Still have  questions?</p>
-                        <a href="#">
-                            <span>Contact us</span>
-                            <i class="fa-solid fa-arrow-right" style="color: #6366F1;"></i>
-                        </a>
-                    </div>
-                    <div class="message-contact-container">
-                        <i class="fa-solid fa-comment-dots fa-flip-horizontal" style="color: #22C55E;"></i>
-                        <p>Don't like phone calls?</p>
-                        <a href="#">
-                            <span>Contact us</span>
-                            <i class="fa-solid fa-arrow-right" style="color: #22C55E;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="FAQ-item">
-                    <a href="#">Is any of my personal information stored in the App?</a>
-                    <button class="circle-btn" >
-                        <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                    </button>
-                    <div class="FAQ-anwser">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                        <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                </div>
-                <div class="FAQ-item"></div>
-                    <a href="#">What formats can I download my transaction history in?</a>
-                    <button class="circle-btn" >
-                        <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                    </button>
-                    <div class="FAQ-anwser">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolorum.</p>
-                    </div>
-                </div>
-                <div class="FAQ-item"></div>
-                    <a href="#">Can I schedule future transfers?</a>
-                    <button class="circle-btn" >
-                        <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                    </button>
-                    <div class="FAQ-anwser">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
-                <div class="FAQ-item"></div>
-                    <a href="#">When can I use Banking App services?</a>
-                    <button class="circle-btn" >
-                        <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                    </button>
-                    <div class="FAQ-anwser">
-                        <p></p>
+                    <div class="FAQ-item">
+                        <div class="dropdown-btn-container">
+                            <button class="dropdown-btn" aria-expanded="false" aria-controls="answer2">
+                                <span>What formats can I download my transaction history in?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div> 
+                        <div class="FAQ-answer" id="answer2" hidden>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolorum.</p>
+                        </div>
                     </div>
                     <div class="FAQ-item">
-                        <a href="#">Can I create my own password that is easy for me to remember?</a>
-                        <button class="circle-btn" >
-                            <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                        </button>
-                        <div class="FAQ-anwser">
+                        <div class="dropdown-btn-container">
+                            <button class="dropdown-btn" aria-expanded="false" aria-controls="answer3">
+                                <span>Can I schedule future transfers?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div> 
+                        <div class="FAQ-answer" id="answer3" hidden>
+                            <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                        </div>
+                    </div>
+                    <div class="FAQ-item">
+                        <div class="dropdown-btn-container">
+                            <button class="dropdown-btn" aria-expanded="false" aria-controls="answer4">
+                                <span>When can I use Banking App services?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div> 
+                        <div class="FAQ-answer" id="answer4" hidden>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus molestiae tenetur eos velit. In repellendus necessitatibus sit! Sapiente labore accusantium, laborum nostrum veniam quisquam architecto tempora sit minus maiores perspiciatis?</p>
+                        </div>
+                    </div>
+                    <div class="FAQ-item">
+                        <div class="dropdown-btn-container">
+                            <button class="dropdown-btn" aria-expanded="false" aria-controls="answer5">
+                                <span>Can I create my own password that is easy for me to remember?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="FAQ-answer" id="answer5" hidden>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo repellendus est atque ea omnis animi, vitae nemo error eum itaque?</p>
                         </div>
                     </div>
                     <div class="FAQ-item">
-                        <a href="#">What happens if I forget or lose my password?</a>
-                        <button class="circle-btn" >
-                            <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                        </button>
-                        <div class="FAQ-anwser">
+                        <div class="dropdown-btn-container">
+                            <button class="dropdown-btn" aria-expanded="false" aria-controls="answer6">
+                                <span>What happens if I forget or lose my password?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="FAQ-answer" id="answer6" hidden>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex labore quas mollitia, repellendus atque accusantium?</p>
                         </div>
                     </div>
                 </div>
+                    <button id="contact-us-btn" class="primary-btn mobile-only">Contact us now</button>
+                    <div class="contact-us-container hide-for-mobile">
+                        <div class="phone-contact-container">
+                            <i class="fa-solid fa-phone-volume fa-rotate-by" style="color: #6366F1; --fa-rotate-angle: 330deg;"></i>
+                            <p>Still have  questions?</p>
+                            <a href="#">
+                                <span>Contact us</span>
+                                <i class="fa-solid fa-arrow-right" style="color: #6366F1;"></i>
+                            </a>
+                        </div>
+                        <div class="message-contact-container">
+                            <i class="fa-solid fa-comment-dots fa-flip-horizontal" style="color: #22C55E;"></i>
+                            <p>Don't like phone calls?</p>
+                            <a href="#">
+                                <span>Contact us</span>
+                                <i class="fa-solid fa-arrow-right" style="color: #22C55E;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </main>
+        </div>
         <div class="container-footer">
             <footer>
                 <p>© 2024 Silicon. All rights reserved.</p>
                 <p>Credit MadrasThemes</p>
             </footer>
         </div>
-     </div>    
+     </div>   
+     <script src="script.js"></script>
 </body>
 </html>

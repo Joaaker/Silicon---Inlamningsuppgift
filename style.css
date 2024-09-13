@@ -364,8 +364,84 @@ article.features{
 
 
 
+.FAQ-contact-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.FAQ-items-container{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E2E5F1;
+  padding: 150px 0;
+  width: 90%;
+}
 
+.FAQ-item{
+  
+  .FAQ-anwser{
+    width: 100%;
+  }
+}
+
+.FAQ-answer {
+
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.FAQ-answer[hidden] {
+  max-height: 0;
+}
+.dropdown-btn-container{
+  display: flex;
+  width: 100%;
+  background-color: #0B0F19;
+  user-select: none;
+  
+  .dropdown-btn{
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 74px;
+    background-color: rgb(142, 230, 142);
+    cursor: pointer;
+    span{
+      font-weight: 600;
+      font-size: 1rem;
+      margin-left: 1.5rem;
+      text-align: start;
+      }
+    i{
+    
+    width: 36px; 
+    height: 36px; 
+    border-radius: 50%;
+    background-color: var(--clr-background-light); 
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+    margin-right: 1.5rem;
+    margin-left: 5px;
+    flex-shrink: 0;
+    }
+
+  }
+}
+i.fa-rotate-180 { /* { Skriven av ChatGPT */
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.FAQ-item.expanded .dropdown-btn i{ /* { Skriven av ChatGPT */
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+}
 
 
 
@@ -384,6 +460,12 @@ footer{
   padding-top: 1rem;
   padding-bottom: 1rem;
   gap: 5px;
+}
+/* Gäller exklusivt för telefon */
+@media (max-width: 767px){
+
+
+
 }
 
 
