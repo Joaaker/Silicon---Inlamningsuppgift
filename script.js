@@ -9,17 +9,6 @@ faqButtons.forEach(button => {
 
         // Toggle the 'aria-expanded' attribute
         button.setAttribute('aria-expanded', !expanded);
-        answer.hidden = expanded;
-
-        // Update the icon
-        const icon = button.querySelector('i');
-        if (expanded) {
-            icon.classList.remove('fa-chevron-up');
-            icon.classList.add('fa-chevron-down');
-        } else {
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-up');
-        }
 
         // Toggle the 'expanded' class on the parent '.FAQ-item' element
         const faqItem = button.closest('.FAQ-item');
