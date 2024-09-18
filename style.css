@@ -42,6 +42,12 @@ header{ /*Färgkod av Johan Larsson */
   /* Mörk tema?  background: linear-gradient(170deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%), #0B0F19; */
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 p{
   color: var(--clr-text-grey);
 }
@@ -57,8 +63,20 @@ p{
 }
 
 .main-logo-container{
-  user-select: none;
+  display: flex;
+  img{
+    user-select: none;
+  }
 }
+
+.p-logo{
+  font-weight: 900;
+  font-size: 24px;
+  color: black;
+  margin-left: 8px;
+}
+
+
 
 /* Grund-Kod för toggleknapp skriven av ChatGPT */
 .dark-mode-toggle {
@@ -150,13 +168,6 @@ p{
 }
 
 
-#nav-features{
-  color: var(--clr-gray800);
-  margin-left: 10px;
-  margin-right: auto;
-  text-decoration: none;
-  font-weight: 600;
-}
 
 .showcase{
   display: grid;
@@ -287,6 +298,7 @@ article.features{
     display: flex;
     font-size: 18px;
     margin-bottom: 1.5rem;
+    max-width: 768px;
   }
 }
 
@@ -338,6 +350,7 @@ article.features{
 
 
 .slider{
+  width: 100%;
   background-color: var(--clr-background-light);
   display: flex;
   flex-direction: column;
@@ -357,7 +370,6 @@ article.features{
     font-size: 1.3rem;
   }
   .p-mobile-tablet{
-    max-width: 370px;
     padding-bottom: 2rem;
   }
   p{
@@ -377,8 +389,7 @@ article.features{
 
 
 .FAQ-contact-section{
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
   max-width: 746px;
   margin: 0 auto;
@@ -400,7 +411,8 @@ article.features{
     width: 100%;
   }
   p{
-    margin: 0.5rem;
+    margin: 0 0.5rem;
+    margin-bottom: 1rem;
     font-size: 14px;
   }
 }
@@ -482,22 +494,45 @@ article.features{
 
 
 #contact-us-btn{
-  margin: 2rem;
+  margin: 2rem auto;
   width: 163px;
   height: 49px;
 }
 
 
+
+
 .subscribe-section{
-  display: flex;
+  display: grid;
+  max-width: 95%;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr-background-light);
+  margin: 0 auto;
+  border-radius: 8px;
 }
+
+.bell-container{
+  width: 78px;
+  user-select: none;
+  margin: 1rem;
+  img{
+    width: 100%;
+  }
+}
+
+.subscribe-form-container{
+  justify-self: center;
+  max-width: max-content;
+}
+
 
 .subscribe-form{
   background-color: var(--clr-white);
-  margin: 1rem;
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin: 1rem 0;
   border: 1px solid var(--clr-gray300);
   border-radius: 8px;
   label{
@@ -509,16 +544,24 @@ article.features{
     border: none;
     outline: none;
   }
+  
 }
 
+#subscribe-btn{
+  width: 80px;
+  padding: 10px 0rem;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+
 .container-footer{
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  height: 50vh;
 }
 
 footer{ 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 14px;
@@ -535,8 +578,37 @@ footer{
 
 /* Gäller exklusivt för telefon */
 @media (max-width: 767px){
+  .p-mobile-tablet{
+    max-width: 370px;
+  }
 
+  .subscribe-section{
+    display: grid;
+    h2.mobile-tablet-only{
+      grid-column: 2 / 2;
+      grid-row: 1 / 2;
+      margin-right: 10px;
+    }
+  }
+  
 
+  .bell-container{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .subscribe-form-container{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    .subscribe-form{
+      max-width: 290px;
+    }
+  }
+
+  div.container-footer footer p{
+    margin: 0;
+    padding: 0;
+  }
 
 }
 
@@ -554,9 +626,12 @@ footer{
   }
 
   .p-mobile-tablet{
-    max-width: 440px !important;
+    max-width: 440px;
   }
 
+  .FAQ-item.expanded .FAQ-answer { 
+    max-height: 200px; 
+  }
 }
 
 /* Gäller för tablets och desktop */
@@ -697,10 +772,88 @@ footer{
     grid-row: 3 / 4;
   }
 
+  .slider{
+    div.tablet-only{
+     width: 80%;
+     img{
+      width: 100%;
+      justify-self: center;
+     }
+    }
+  }
+
   .mobile-only{
     display: none;
   }
   
+  .FAQ-items-container{
+    border: none;
+    gap: 1rem; 
+  }
+
+  .FAQ-item{
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.151);
+  }
+  .FAQ-item.expanded .FAQ-answer{
+    border: none;
+  }
+
+  .dropdown-btn-container{
+    border: none;
+  }
+
+  .contact-us-container{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+    .phone-contact-container,
+    .message-contact-container{
+      border: 1px solid var(--clr-gray300);
+      border-radius: 8px;
+      padding: 1rem;
+      width: 46%;
+      a{
+        text-decoration: none;
+      }
+      .green{
+        color: #22C55E;
+      }
+      .purple{
+        color: var(--clr-primary);
+      }
+    }
+  }
+
+  .subscribe-section{
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    margin: 1.5rem;
+    max-width: 768px;
+    h2.mobile-tablet-only{
+      max-width: 13rem;
+      margin: 0;
+    }
+  }
+
+  .subscribe-form-container{
+    margin-right: 1rem;
+  }
+
+  #subscribe-btn{
+    padding: 10px 2rem;
+  }
+
+  .container-footer footer{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
 }
 
 /* Gäller endast för mobil och tablets */
@@ -732,12 +885,15 @@ footer{
   }
 
   #nav-features{
-    margin-left: 0;
+    color: var(--clr-gray800);
+    margin-left: 1.5rem;
+    margin-right: auto;
     font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
   }
 
-  .btn-mobile-tablet,
-  .p-mobile-tablet,
+  .mobile-tablet-only,
   .tablet-only{
     display: none;
   }
@@ -947,6 +1103,7 @@ footer{
     margin-bottom: auto;
   }
   .testimonials{
+    width: 100%;
     background-color: var(--clr-background-light);
     padding: 5rem 0;
   }
@@ -963,7 +1120,79 @@ footer{
       margin-right: 5rem;
     }
   }
+  .img-container-testimonials{
+    user-select: none;
+  }
 
+  .FAQ-contact-section{
+    max-width: 1320px;
+    padding: 6rem 1rem;
+  }
 
+  .text-container{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-right: 8.5rem;
+    padding-top: 0;
+    padding-left: 0;
+    h2{
+      display: flex;
+      text-align: start;
+    }
+    p{
+      display: flex;
+      text-align: start;
+    }
+  }
+
+  .FAQ-items-container{
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+  }
+
+  .FAQ-item.expanded .FAQ-answer { 
+    max-height: 170px; 
+  }
+
+  .FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer { 
+    border-top: none;
+  }
+
+  .contact-us-container{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-right: 7.5rem;
+    max-width: 400px;
+    p{
+      font-size: 14px;
+    }
+  }
+
+  .subscribe-section{
+    min-width: 1290px;
+    height: 14rem;
+    border-radius: 12px;
+    .bell-container{
+      margin-left: auto;
+      margin-right: 2rem;
+    } h2{
+      max-width: 500px;
+      font-weight: 900;
+    } .subscribe-form-container{
+      margin-right: auto;
+    }
+  }
+
+  .subscribe-form{
+    label i{
+      margin-left: 0.5rem;
+    }
+    input{
+      min-width: 270px;
+    }
+    #subscribe-btn{
+      padding: 18px 70px;
+    }
+  }
 }
 
