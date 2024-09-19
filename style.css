@@ -5,6 +5,7 @@
   --clr-primary: hsl(238, 85%, 68%);
   --clr-white: #FFFFFF;
   --clr-white-opacity: rgba(255, 255, 255, 0.08);
+  --clr-white-low-opacity: rgba(255, 255, 255, 0.04);
   --clr-dark900: #0B0F19;
   --clr-gray800: #33354D;
   --clr-gray700: #565973;
@@ -25,17 +26,6 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   max-width: 100%;
 }
-
-
-  #googleplay-mobile-dark,
-  #appstore-mobile-dark,
-  #googleplay-tablet-dark,
-  #appstore-tablet-dark,
-  #appstore-dark,
-  #googleplay-dark{
-    display: none;
-  }
-
 
 body{
   font-family: "Manrope", sans-serif;
@@ -220,30 +210,18 @@ p{
   user-select: text;
 }
 
-.appstore{
+.store-btn{
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 95%;
   margin: 0.5rem auto;
+  padding: 0.7rem 7rem;
+  border-radius: 8px;
 }
 
-.googleplay{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0.5rem auto;
-}
-
-.appstore img,
-.googleplay img {
-  padding: 0;
-  margin: 0;
-}
-
-#appstore,
-#googleplay,
-#googleplay-tablet,
-#appstore-tablet{
+.dark-display{
   display: none;
 }
 
@@ -550,6 +528,7 @@ article.features{
 .subscribe-form-container{
   justify-self: center;
   max-width: max-content;
+  margin-bottom: 1rem;
 }
 
 
@@ -558,7 +537,6 @@ article.features{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0;
   border: 1px solid var(--clr-gray300);
   border-radius: 8px;
   label{
@@ -642,11 +620,14 @@ footer{
 
 /* Gäller endast för tablets */
 @media (min-width: 768px) and (max-width: 1339px){
-  #googleplay-tablet,
-  #appstore-tablet,
+  .store-btn{
+    padding: 0.5rem 0.9rem;
+  }
+
   .tablet-only{
     display: block;
   }
+  
   h3.tablet-only{
     max-width: 320px;
   }
@@ -660,7 +641,7 @@ footer{
   }
 }
 
-/* Gäller för tablets och desktop */
+/* Gäller för tablet och desktop */
 @media (min-width: 768px){
   .navbar{
     margin-bottom: var(--base-padding);
@@ -696,7 +677,7 @@ footer{
     }
 
     
-    .appstore{
+    #appstore{
       grid-column: 1 / 2;
       grid-row:  5 / 6;
       margin-bottom: 0.5rem;
@@ -705,7 +686,7 @@ footer{
       margin-right: 0;
     }
 
-    .googleplay{
+    #googleplay{
       grid-column: 2 / 3;
       grid-row: 5 / 6;
       margin-bottom: 0.5rem;
@@ -713,12 +694,6 @@ footer{
       margin-right: auto;
       margin-left: 0.5rem;
     }
-
-    #appstore-mobile,
-    #googleplay-mobile{
-      display: none;
-    }
-
 
     .discover-btn-container{
       padding: 2rem 0;
@@ -840,8 +815,7 @@ footer{
     gap: 1.5rem;
     justify-content: center;
 
-    .phone-contact-container,
-    .message-contact-container{
+    .contact-container{
       border: 1px solid var(--clr-gray300);
       border-radius: 8px;
       padding: 1rem;
@@ -872,6 +846,7 @@ footer{
 
   .subscribe-form-container{
     margin-right: 1rem;
+    margin-bottom: 0;
   }
 
   #subscribe-btn{
@@ -952,12 +927,16 @@ footer{
       grid-row: 2 / 3;
       padding-top: var(--base-padding);
     }
-    .appstore{
+    .store-btn{
+      padding: 0.6rem 1.7rem;
+    }
+
+    #appstore{
       grid-column: 1 / 2;
       grid-row: 3 / 5;
       margin-left: 0;
     }
-    .googleplay{
+    #googleplay{
       grid-column: 2 / 4;
       grid-row: 3 / 5;
       margin-right: auto;
@@ -975,11 +954,6 @@ footer{
     }
 
   }
-
-  #googleplay,
-  #appstore{
-    display: block;
-  }
   .all-logos-container{
     max-width: 1320px;
   }
@@ -994,8 +968,9 @@ footer{
   }
 
   article.features{
-    max-width: 1320px;
+    width: 1320px;
     display: grid;
+    justify-content: space-between;
     padding-bottom: 4rem;
   }
   .iphone-image-container{
@@ -1007,7 +982,6 @@ footer{
     max-width: 746px;
     grid-column: 2 / 3;
     grid-row: 1 / 4;
-    margin-left: auto;
     h2{
       justify-content: flex-start !important;
     }
@@ -1080,7 +1054,7 @@ footer{
     justify-content: flex-end;
   }
 
-  #contact-container{
+  #contacts-container{
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
@@ -1227,13 +1201,12 @@ footer{
 
 /* Dark mode */
 html.dark-mode{
-  /* color-scheme: dark; */
-  background-color: black;
-  
+  background-color: var(--clr-dark900);
 
   h1, h2, h3, #hamburger, i{
     color: var(--clr-white);
   }
+
   button.circle-btn,
   .img-container-features img{
     background-color: var(--clr-white-opacity);
@@ -1250,59 +1223,52 @@ html.dark-mode{
     color: var(--clr-gray300);
   }
 
-  /* Bilder som inte ska synas i dark mode */
-  #appstore,
-  #googleplay,
-  #googleplay-tablet,
-  #appstore-tablet,
-  #googleplay-mobile,
-  #appstore-mobile{
+  .store-btn{
+    background-color: var(--clr-white);
+  }
+  .dark-display{
+    display: block;
+  }
+
+  .light-display{
     display: none;
   }
+  .logo-container{
+    border: 1px solid var(--clr-white-opacity);
+  }
 
-  /* Gäller exklusivt för telefon */
-  @media (max-width: 767px){
-    #googleplay-mobile-dark,
-    #appstore-mobile-dark{
-      display: block;
+  .testimonials,
+  .slider,
+  .subscribe-section,
+  .subscribe-form{
+    background-color: var(--clr-white-opacity);
+  }
+
+  .contact-container{
+    border: 1px solid var(--clr-white-opacity);
+  }
+
+  .dropdown-btn{
+    background-color: var(--clr-white-low-opacity);
+    span{
+    color: var(--clr-white);
     }
-
-    
-    #googleplay-tablet-dark,
-    #appstore-tablet-dark,
-    #appstore-dark,
-    #googleplay-dark{
-      display: none;
+    i{
+      background-color: var(--clr-white-low-opacity);
     }
   }
 
-  /* Gäller endast för tablets */
-  @media (min-width: 768px) and (max-width: 1339px){
-    #googleplay-tablet-dark,
-    #appstore-tablet-dark{
-      display: block;
-    }
-
-    #googleplay-mobile-dark,
-    #appstore-mobile-dark,
-    #appstore-dark,
-    #googleplay-dark{
-      display: none;
-    }
+  .subscribe-form{
+    border: 1px solid var(--clr-white-opacity);
   }
 
-  /* Gäller endast för desktop */
-  @media (min-width: 1340px){
-    #appstore-dark,
-    #googleplay-dark{
-      display: block;
-    }
-
-    #googleplay-mobile-dark,
-    #appstore-mobile-dark,
-    #googleplay-tablet-dark,
-    #appstore-tablet-dark{
-      display: none;
-    }
+  #email-input{
+    background-color: transparent;
   }
+
+
+
+
+
+  
 }

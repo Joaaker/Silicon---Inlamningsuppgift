@@ -35,21 +35,13 @@
                     <h1>Manage All Your <br> Money in One App</h1>
                 </div>
                 <p>We offer you a new generation of the mobile banking. <br class="tablet-desktop-only">Save, spend & manage money in your pocket.</p>
-                <a href="#" class="appstore">
-                    <img id="appstore-mobile" src="/Images/app store mobile.svg" alt="Apple app store">
-                    <img id="appstore-tablet" src="/Images/app store tablet.svg" alt="Apple app store">
-                    <img id="appstore" src="/Images/appstore.svg" alt="Apple app store">
-                    <img id="appstore-mobile-dark" src="/Images/appstore mobile dark.svg" alt="Apple app store">
-                    <img id="appstore-tablet-dark" src="/Images/appstore tablet dark.svg" alt="Apple app store">
-                    <img id="appstore-dark" src="/Images/appstore desktop dark.svg" alt="Apple app store">
+                <a href="#" class="store-btn" id="appstore">
+                   <img class="light-display" src="/Images/app store light.svg" alt="App store logo">
+                   <img class="dark-display" src="/Images/app store dark.svg" alt="App store logo">
                 </a>
-                <a href="#" class="googleplay">
-                    <img id="googleplay-mobile" src="/Images/google play mobile.svg" alt="Google play">
-                    <img id="googleplay-tablet" src="/Images/google play tablet.svg" alt="Google play"> 
-                    <img id="googleplay" src="/Images/googleplay.svg" alt="Google play">
-                    <img id="googleplay-mobile-dark" src="/Images/google play mobile dark.svg" alt="Google play">
-                    <img id="googleplay-tablet-dark" src="/Images/google play tablet dark.svg" alt="Google play"> 
-                    <img id="googleplay-dark" src="/Images/googleplay desktop dark.svg" alt="Google play">        
+                <a href="#" class="store-btn" id="googleplay">
+                    <img class="light-display" src="/Images/google play light.svg" alt="Google play logo">
+                    <img class="dark-display" src="/Images/google play dark.svg" alt="Google play logo">
                 </a>
                 <div class="discover-btn-container">
                     <button aria-label="Discover more" class="circle-btn">
@@ -178,7 +170,7 @@
                 <div id="forecast-container">
                     <img src="/Images/forecast.svg" alt="forecast preview">
                 </div>
-                <div id="contact-container">
+                <div id="contacts-container">
                     <img src="/Images/contacts.svg" alt="contacts preview">
                 </div>
                 <div class="lowerWrapper">  
@@ -205,10 +197,12 @@
                 <div class="testimonials-wrapper">
                     <h2>Clients are <br> Loving Our App</h2>
                     <div class="img-container-testimonials">
-                        <img src="/Images/testimonial 1.svg" alt="customer testimonial 1">
+                        <img class="light-display" src="/Images/testimonial 1.svg" alt="customer testimonial 1">
+                        <img class="dark-display" src="/Images/testimonial 1 dark.svg" alt="customer testimonial 1">
                     </div>
                     <div class="img-container-testimonials">
-                        <img src="/Images/testimonial 2.svg" alt="customer testimonial 2">
+                        <img class="light-display" src="/Images/testimonial 2.svg" alt="customer testimonial 2">
+                        <img class="dark-display" src="/Images/testimonial 2 dark.svg" alt="customer testimonial 2">
                     </div>
                 </div>
             </article>
@@ -289,7 +283,7 @@
                 </div>
                 <button id="contact-us-btn" class="primary-btn mobile-only">Contact us now</button>
                 <div class="contact-us-container hide-for-mobile">
-                    <div class="phone-contact-container">
+                    <div class="contact-container">
                         <i class="fa-solid fa-phone-volume" style="color: #6366F1; transform: rotate(330deg);"></i>
                         <p>Still have  questions?</p>
                         <a href="#" class="purple">
@@ -297,7 +291,7 @@
                             <i class="fa-solid fa-arrow-right" style="color: #6366F1;"></i>
                         </a>
                     </div>
-                    <div class="message-contact-container">
+                    <div class="contact-container">
                         <i class="fa-solid fa-comment-dots fa-flip-horizontal" style="color: #22C55E;"></i>
                         <p>Don't like phone calls?</p>
                         <a href="#" class="green">
@@ -318,7 +312,7 @@
                         <label for="email">
                             <i class="fa-regular fa-envelope" style="color: #9397AD;"></i>
                         </label>
-                        <input type="email" placeholder="Your Email">
+                        <input id="email-input" type="email" placeholder="Your Email">
                         <button type="submit" id="subscribe-btn" class="primary-btn">Subscribe</button>
                     </form>
                 </div>
