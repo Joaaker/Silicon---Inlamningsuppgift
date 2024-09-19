@@ -4,17 +4,20 @@
 :root {
   --clr-primary: hsl(238, 85%, 68%);
   --clr-white: #FFFFFF;
+  --clr-white-opacity: rgba(255, 255, 255, 0.08);
   --clr-dark900: #0B0F19;
   --clr-gray800: #33354D;
   --clr-gray700: #565973;
   --clr-gray600: #9397AD;
   --clr-gray300: #E2E5F1;
+  --clr-gray400: #D4D7E5;
   --clr-icon: #3E4265;
   --clr-text-grey: #585C7B;
   --clr-background-light: #F3F6FF;
   --clr-primaryHover: #6365f1ad;
   --base-padding: 1rem;
   --transition-time: all 0.2s;
+  
 }
 
 * {
@@ -22,6 +25,17 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   max-width: 100%;
 }
+
+
+  #googleplay-mobile-dark,
+  #appstore-mobile-dark,
+  #googleplay-tablet-dark,
+  #appstore-tablet-dark,
+  #appstore-dark,
+  #googleplay-dark{
+    display: none;
+  }
+
 
 body{
   font-family: "Manrope", sans-serif;
@@ -47,6 +61,18 @@ main{
   flex-direction: column;
   align-items: center;
 }
+
+.screen-reader-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 
 p{
   color: var(--clr-text-grey);
@@ -652,6 +678,7 @@ footer{
   .showcase{
     display: grid;
     padding: 1.8rem;
+    padding-bottom: 0;
 
 
     .h1-container{
@@ -795,8 +822,13 @@ footer{
     border: none;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.151);
   }
+
   .FAQ-item.expanded .FAQ-answer{
     border: none;
+  }
+  
+  .FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer { 
+    border-top: none;
   }
 
   .dropdown-btn-container{
@@ -1154,9 +1186,6 @@ footer{
     max-height: 170px; 
   }
 
-  .FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer { 
-    border-top: none;
-  }
 
   .contact-us-container{
     grid-column: 1 / 2;
@@ -1196,3 +1225,84 @@ footer{
   }
 }
 
+/* Dark mode */
+html.dark-mode{
+  /* color-scheme: dark; */
+  background-color: black;
+  
+
+  h1, h2, h3, #hamburger, i{
+    color: var(--clr-white);
+  }
+  button.circle-btn,
+  .img-container-features img{
+    background-color: var(--clr-white-opacity);
+  }
+
+  p, .dark{
+    color: var(--clr-gray600);
+    
+  }
+  .p-logo{
+    color: var(--clr-white);
+  }
+  #nav-features{
+    color: var(--clr-gray300);
+  }
+
+  /* Bilder som inte ska synas i dark mode */
+  #appstore,
+  #googleplay,
+  #googleplay-tablet,
+  #appstore-tablet,
+  #googleplay-mobile,
+  #appstore-mobile{
+    display: none;
+  }
+
+  /* Gäller exklusivt för telefon */
+  @media (max-width: 767px){
+    #googleplay-mobile-dark,
+    #appstore-mobile-dark{
+      display: block;
+    }
+
+    
+    #googleplay-tablet-dark,
+    #appstore-tablet-dark,
+    #appstore-dark,
+    #googleplay-dark{
+      display: none;
+    }
+  }
+
+  /* Gäller endast för tablets */
+  @media (min-width: 768px) and (max-width: 1339px){
+    #googleplay-tablet-dark,
+    #appstore-tablet-dark{
+      display: block;
+    }
+
+    #googleplay-mobile-dark,
+    #appstore-mobile-dark,
+    #appstore-dark,
+    #googleplay-dark{
+      display: none;
+    }
+  }
+
+  /* Gäller endast för desktop */
+  @media (min-width: 1340px){
+    #appstore-dark,
+    #googleplay-dark{
+      display: block;
+    }
+
+    #googleplay-mobile-dark,
+    #appstore-mobile-dark,
+    #googleplay-tablet-dark,
+    #appstore-tablet-dark{
+      display: none;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-mode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +22,12 @@
                     <input type="checkbox" id="dark-mode" class="toggle-checkbox">
                     <label aria-label="Dark mode toggle button" for="dark-mode" class="toggle-label"></label>
                 </div><!-- Kod för toggleknapp skriven av ChatGPT -->
-                <button class="primary-btn desktop-only" id="signin-auth-btn" href="#">
+                <a class="primary-btn desktop-only" id="signin-auth-btn" href="#">
                     <i class="fa-regular fa-user"></i>
                     <span>Sign in / up</span>
-                </button>
+                  </a>
                 <button class="btn-mobile-tablet mobile-tablet-only">
-                    <i class="fa-solid fa-bars"></i>
+                    <i id="hamburger" class="fa-solid fa-bars"></i>
                 </button>
             </nav>
             <section class="showcase">
@@ -39,17 +39,23 @@
                     <img id="appstore-mobile" src="/Images/app store mobile.svg" alt="Apple app store">
                     <img id="appstore-tablet" src="/Images/app store tablet.svg" alt="Apple app store">
                     <img id="appstore" src="/Images/appstore.svg" alt="Apple app store">
+                    <img id="appstore-mobile-dark" src="/Images/appstore mobile dark.svg" alt="Apple app store">
+                    <img id="appstore-tablet-dark" src="/Images/appstore tablet dark.svg" alt="Apple app store">
+                    <img id="appstore-dark" src="/Images/appstore desktop dark.svg" alt="Apple app store">
                 </a>
                 <a href="#" class="googleplay">
                     <img id="googleplay-mobile" src="/Images/google play mobile.svg" alt="Google play">
                     <img id="googleplay-tablet" src="/Images/google play tablet.svg" alt="Google play"> 
-                    <img id="googleplay" src="/Images/googleplay.svg" alt="Google play">      
+                    <img id="googleplay" src="/Images/googleplay.svg" alt="Google play">
+                    <img id="googleplay-mobile-dark" src="/Images/google play mobile dark.svg" alt="Google play">
+                    <img id="googleplay-tablet-dark" src="/Images/google play tablet dark.svg" alt="Google play"> 
+                    <img id="googleplay-dark" src="/Images/googleplay desktop dark.svg" alt="Google play">        
                 </a>
                 <div class="discover-btn-container">
                     <button aria-label="Discover more" class="circle-btn">
                         <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
                     </button>
-                    <span>Discover more</span>
+                    <span class="dark">Discover more</span>
                 </div>
                 <div class="imageContainer">
                     <img src="/Images/iphone 12 header.svg" alt="iPhone 12">
@@ -284,7 +290,7 @@
                 <button id="contact-us-btn" class="primary-btn mobile-only">Contact us now</button>
                 <div class="contact-us-container hide-for-mobile">
                     <div class="phone-contact-container">
-                        <i class="fa-solid fa-phone-volume fa-rotate-by" style="color: #6366F1; --fa-rotate-angle: 330deg;"></i>
+                        <i class="fa-solid fa-phone-volume" style="color: #6366F1; transform: rotate(330deg);"></i>
                         <p>Still have  questions?</p>
                         <a href="#" class="purple">
                             <span>Contact us</span>
