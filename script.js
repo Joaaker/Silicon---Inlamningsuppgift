@@ -54,6 +54,39 @@ faqButtons.forEach(button => {
     });
 });
 
+// Function to update the FAQ based on screen size
+function updateFAQ() {
+  // Get all FAQ items
+  const faqItems = document.querySelectorAll('.FAQ-item');
+
+  // Close all FAQ items
+  faqItems.forEach(item => {
+      const button = item.querySelector('.dropdown-btn');
+      button.setAttribute('aria-expanded', 'false');
+      item.classList.remove('expanded');
+  });
+
+  // Determine which FAQ item to open
+  if (window.innerWidth < 768) {
+      // Mobile view: Open FAQ answer 1
+      const answer1Item = document.querySelector('.dropdown-btn[aria-controls="answer1"]').closest('.FAQ-item');
+      const button1 = answer1Item.querySelector('.dropdown-btn');
+      button1.setAttribute('aria-expanded', 'true');
+      answer1Item.classList.add('expanded');
+  } else {
+      // Tablet and desktop view: Open FAQ answer 3
+      const answer3Item = document.querySelector('.dropdown-btn[aria-controls="answer3"]').closest('.FAQ-item');
+      const button3 = answer3Item.querySelector('.dropdown-btn');
+      button3.setAttribute('aria-expanded', 'true');
+      answer3Item.classList.add('expanded');
+  }
+}
+
+// Call the function on page load
+updateFAQ();
+
+// Listen for window resize events to update the FAQ items dynamically
+window.addEventListener('resize', updateFAQ);
 
 
 

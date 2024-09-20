@@ -308,14 +308,13 @@
                 <h2 class="mobile-tablet-only">Subscribe to our newsletter</h2>
                 <h2 class="desktop-only">Subscribe to our newsletter to stay informed about latest updates</h2>
                 <div class="subscribe-form-container">
-                    <form action="#" class="subscribe-form">
+                    <form action="#" class="subscribe-form" id="subscribe-form">
                         <label for="email">
                             <i class="fa-regular fa-envelope" style="color: #9397AD;"></i>
                         </label>
-                        <input id="email-input" type="email" placeholder="Your Email">
-                        <button type="submit" id="subscribe-btn" class="primary-btn">Subscribe</button>
+                        <input id="email-input" type="email" placeholder="Your Email" required>
                     </form>
-                    <button type="submit" id="subscribe-btn" class="primary-btn">Subscribe</button>
+                    <button type="submit" form="subscribe-form" id="subscribe-btn" class="primary-btn">Subscribe</button>
                 </div>
             </section>
         <div class="container-footer">

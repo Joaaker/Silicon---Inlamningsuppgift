@@ -526,6 +526,7 @@ article.features{
 }
 
 .subscribe-form-container{
+  display: flex;
   justify-self: center;
   max-width: max-content;
   margin-bottom: 1rem;
@@ -540,6 +541,10 @@ article.features{
   align-items: center;
   border: 1px solid var(--clr-gray300);
   border-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 100%;
+  max-width: 400px;
   label{
     margin: 0 0.5rem;
     user-select: none;
@@ -548,15 +553,19 @@ article.features{
     margin: 0 0.5rem;
     border: none;
     outline: none;
+    overflow: hidden;
   }
   
 }
 
 #subscribe-btn{
-  width: 80px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 120px;
   padding: 10px 2px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+  padding:  16px 8px;
 }
 
 
@@ -608,14 +617,17 @@ footer{
     grid-row: 2 / 3;
     .subscribe-form{
       border: none;
-      max-width: 290px;
+      max-width: 225px;
       i{
         margin-left: 0.8rem;
       }
     }
   }
   #subscribe-btn{
-    padding:  16px 8px;
+    padding:  1rem 0.5rem;
+    @media (max-width: 335px){ /* För väldigt små telefoner*/
+      padding: 1rem 0px;
+    }
   }
   div.container-footer footer p{
     margin: 0;
@@ -855,6 +867,9 @@ footer{
   .subscribe-form-container{
     margin-right: 1rem;
     margin-bottom: 0;
+    .subscribe-form label i{
+      margin-left: 0.5rem;
+    }
   }
 
   #subscribe-btn{
@@ -1201,9 +1216,10 @@ footer{
     input{
       min-width: 270px;
     }
-    #subscribe-btn{
-      padding: 18px 70px;
-    }
+    
+  }
+  #subscribe-btn{
+    padding: 18px 70px;
   }
 }
 
@@ -1266,10 +1282,6 @@ html.dark-mode{
   }
   .subscribe-form{
     border: none;
-   
-    #subscribe-btn{
-      
-    }
   }
 
   @media (min-width: 1340px){
