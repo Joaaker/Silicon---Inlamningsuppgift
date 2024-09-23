@@ -21,7 +21,9 @@
   
 }
 
-* {
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   max-width: 100%;
@@ -33,12 +35,30 @@ body{
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  margin: 0;
-  padding: 0;
 }
 
 .wrapper{
   width: 100%;
+}
+
+input, button, textarea, select{
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 900;
+}
+
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 header{
@@ -51,18 +71,6 @@ main{
   flex-direction: column;
   align-items: center;
 }
-
-.screen-reader-only{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
 
 p{
   color: var(--clr-text-grey);
@@ -295,7 +303,6 @@ article.features{
   display: flex;
   justify-content: center;
   margin-top: 0.5rem;
-  font-weight: 900;
   font-size: 28px;
   }
   .lorem-text{
@@ -321,7 +328,6 @@ article.features{
     margin-left: auto;
   }
   h3{
-    font-weight: 900;
     font-size: 20px;
     grid-column: 2 / 4;
 
@@ -360,13 +366,11 @@ article.features{
   flex-direction: column;
   align-items: center;
   h2{
-    font-weight: 900;
     font-size: 1.7rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
   }
   h3{
-    font-weight: 900;
     text-align: center;
   }
   h3.mobile-only{
@@ -386,9 +390,6 @@ article.features{
   flex-direction: column;
   text-align: center;
   padding: 1rem;
-  h2{
-    font-weight: 900;
-  }
 }
 
 
@@ -410,10 +411,6 @@ article.features{
 }
 
 .FAQ-item{
-  .FAQ-anwser{
-    padding: 1.2rem;
-    width: 100%;
-  }
   p{
     margin: 0 0.5rem;
     margin-bottom: 1rem;
@@ -429,7 +426,6 @@ article.features{
   border-bottom: 1px solid var(--clr-gray300);
   
   .dropdown-btn{
-    font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -479,7 +475,7 @@ article.features{
 .FAQ-answer { /* Grund-kod från Chat-GPT*/
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.7s ease; /* Ändra till 0.5s eller 5s som du testade */
+  transition: max-height 0.5s ease-in; /* Ändra till 0.5s eller 5s som du testade */
   /* border-bottom: 1px solid var(--clr-gray300); */
 }
 
@@ -941,7 +937,6 @@ footer{
       padding-top: 1.5rem;
       h1{
         font-size: 52px;
-        font-weight: 900;
         padding-left: 0;
       }
     }
@@ -1033,7 +1028,6 @@ footer{
     max-width: 1080px;
     margin: 7rem auto;
     h2{
-      font-weight: 900;
       font-size: 30px;
     }
   }
@@ -1143,7 +1137,6 @@ footer{
     justify-content: space-evenly;
     margin: 0 auto;
     h2{
-      font-weight: 900;
       font-size: 34px;
       align-self: flex-start;
       margin-right: 5rem;
@@ -1203,7 +1196,6 @@ footer{
       margin-right: 2rem;
     } h2{
       max-width: 500px;
-      font-weight: 900;
     } .subscribe-form-container{
       margin-right: auto;
     }
@@ -1290,7 +1282,7 @@ html.dark-mode{
       background-color: var(--clr-white-opacity);
     }
 
-    #email-input{
+    #email{
       background-color: transparent;
     }
   }
