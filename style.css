@@ -35,9 +35,6 @@ body{
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-}
-
-.wrapper{
   width: 100%;
 }
 
@@ -49,6 +46,9 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 900;
 }
 
+.u-select-none{
+  user-select: none;
+}
 
 .sr-only{
   position: absolute;
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6{
   border-width: 0;
 }
 
-header{
+.gradient-wrapper{
   background: rgb(99,102,241);
   background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
 }
@@ -198,15 +198,15 @@ p{
   user-select: none;
 }
 
-.showcase h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 var(--base-padding);
-  margin: 0.5rem auto;
-  font-size: 40px;
-  user-select: text;
+.h1-container{
+  h1{
+    padding: 0 var(--base-padding);
+    margin: 0.5rem auto;
+    font-size: 40px;
+    user-select: text;
+  }
 }
+
 
 .showcase p{
   display: flex;
@@ -643,6 +643,11 @@ footer{
   .tablet-only{
     display: block;
   }
+
+  .h1-container{
+    max-width: 450px;
+    padding-bottom: 1rem;
+  }
   
   h3.tablet-only{
     max-width: 320px;
@@ -893,16 +898,18 @@ footer{
   .desktop-only{
     display: none;
   }
+
+  .h1-container{
+    h1{
+    display: flex;
+    text-align: center;
+    }
+  }
 }
 
 
 /* Gäller endast för desktop */
 @media (min-width: 1340px){
-
-  .wrapper{
-    width: 100%;
-  }
-
   .navbar{
     max-width: 1320px;
     grid-template-columns: 1fr 5fr auto auto;
@@ -935,6 +942,7 @@ footer{
       margin-right: auto;
       margin-left: 0;
       padding-top: 1.5rem;
+      max-width: 500px;
       h1{
         font-size: 52px;
         padding-left: 0;
