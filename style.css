@@ -26,7 +26,6 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  max-width: 100%;
 }
 
 body{
@@ -638,6 +637,7 @@ footer{
 @media (min-width: 768px) and (max-width: 1339px){
   .store-btn{
     padding: 0.5rem 0.9rem;
+    max-width: 8rem;
   }
 
   .tablet-only{
@@ -678,6 +678,7 @@ footer{
     margin-right: 1.5rem;
   }
   .showcase{
+    max-width: 100%;
     display: grid;
     padding: 1.8rem;
     padding-bottom: 0;
@@ -695,6 +696,7 @@ footer{
       margin-top: 0;
       text-align: start;
       margin-bottom: 2rem;
+      max-width: 100%;
     }
 
     
@@ -705,6 +707,9 @@ footer{
       margin-top: 0;
       margin-left: 0;
       margin-right: 0;
+      img{
+        max-width: 100%;
+      }
     }
 
     #googleplay{
@@ -714,6 +719,9 @@ footer{
       margin-top: 0;
       margin-right: auto;
       margin-left: 0.5rem;
+      img{
+        max-width: 100%;
+      }
     }
 
     .discover-btn-container{
@@ -722,15 +730,19 @@ footer{
       grid-row: 6 / 8;
       margin-right: auto;
       margin-left: 0;
+      max-width: 100%;
     }
   }
 
   .imageContainer{
     display: block;
-    padding-right: var(--base-padding);
     grid-column: 3 / 8;
     grid-row: 2 / 8;
+
     width: 100%;
+    img{
+      max-width: 100%;
+    }
   }
   .all-logos-container{
     display: flex;
