@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-
+/* Finns i colors.scss */
 :root {
   --clr-primary: hsl(238, 85%, 68%);
+  --clr-linear-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
   --clr-white: #FFFFFF;
   --clr-white-opacity: rgba(255, 255, 255, 0.08);
   --clr-white-low-opacity: rgba(255, 255, 255, 0.04);
@@ -20,7 +21,7 @@
   --transition-time: all 0.2s;
   
 }
-
+/* Finns i base.scss */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body{
+body{  /* Finns i base.scss  och typography */
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -37,18 +38,18 @@ body{
   width: 100%;
 }
 
-input, button, textarea, select{
+input, button, textarea, select{ /* Finns i base.scss */
   font: inherit;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{ /* Finns i mixin typo.scss */
   font-weight: 900;
 }
 
-.u-select-none{
+.u-select-none{ /* Finns i base.scss */
   user-select: none;
 }
-
+/* Finns i base.scss */
 .sr-only{
   position: absolute;
   width: 1px;
@@ -60,12 +61,14 @@ h1, h2, h3, h4, h5, h6{
   border-width: 0;
 }
 
+/* ligger i body */
 .gradient-wrapper{
-  background: rgb(99,102,241);
-  background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+  background: var(--clr-primary);
+  background: var(--clr-linear-gradient);
 }
 
-main{
+/* Ligger i body */
+main{ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,9 +90,6 @@ p{
 
 .main-logo-container{
   display: flex;
-  img{
-    user-select: none;
-  }
 }
 
 .p-logo{
@@ -217,7 +217,7 @@ p{
   user-select: text;
 }
 
-.store-btn{
+.store-btn{ /* med*/
   background-color: black;
   display: flex;
   align-items: center;
@@ -228,7 +228,8 @@ p{
   border-radius: 8px;
 }
 
-.dark-display{
+/*med*/
+.dark-display{ 
   display: none;
 }
 
@@ -262,9 +263,7 @@ p{
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
-.circle-btn:hover{
- /* background-color: darken(var(--clr-white), 20%); /* Från ChatGPT, FUNGERAR SEN MED SCSS*/
-}
+
 
 .circle-btn i {
   color: var(--clr-icon);
@@ -273,7 +272,7 @@ p{
 
 
 
-.all-logos-container,
+.all-logos-container, /*base*/
 .iphone-image-container, 
 .imageContainer,
 .tablet-desktop-only,
@@ -1306,9 +1305,4 @@ html.dark-mode{
       background-color: transparent;
     }
   }
-
-
-
-
-  
 }

@@ -1,3 +1,18 @@
-body{
-    
-}
+@import "./mixins/mixins";
+
+@import "./misc/base";
+
+@import "./components/container";
+@import "./components/links";
+
+
+@import "./sections/header";
+@import "./sections/showcase";
+@import "./sections/logo-section";
+@import "./sections/features";
+@import "./sections/slider";
+@import "./sections/features2";
+@import "./sections/testimonials";
+@import "./sections/FAQ";
+@import "./sections/subscribe";
+@import "./sections/footer";
